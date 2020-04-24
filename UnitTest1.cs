@@ -27,7 +27,9 @@ namespace basetest
             //Console.WriteLine(firstResult.GetAttribute("textContent"));
         //}
 
-         using (IWebDriver driver = new ChromeDriver(@"/usr/bin"))
+        var options =new ChromeOptions();
+        options.AddArguments("headless");
+         using (IWebDriver driver = new ChromeDriver(@"/usr/bin",options))
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             driver.Navigate().GoToUrl("https://www.google.com/ncr");

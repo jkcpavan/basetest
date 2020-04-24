@@ -47,7 +47,7 @@ unzip \
 #COPY bootstrap.sh /
 
 #RUN chmod a+x /bootstrap.sh
-#CMD ["chmod", "+x", "/bootstrap.sh"]
+CMD ["chmod", "+x", "/bootstrap.sh"]
 RUN chmod a+x /usr/bin/chromedriver
 CMD ["chmod", "+x", "/usr/bin/chromedriver"]
 
